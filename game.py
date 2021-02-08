@@ -1,10 +1,14 @@
 # game.py
-#portions attributed to class 4 lecture video and comments via Slack
 import random
 #from random import choice
+from dotenv import load_dotenv()
+
+load_dotenv()
+
+USER_NAME = os.getenv("USER_NAME", default="Player One")
 
 print("-------------------")
-print("Welcome 'Player One' to my Rock-Paper-Scissors game...")
+print(f"Welcome {USER_NAME} to my Rock-Paper-Scissors game...")
 print("-------------------")
 
 #asking user for input
@@ -16,7 +20,8 @@ print(f"You chose: {user_choice}")
 
 list = ['rock', 'paper', 'scissors']
 if user_choice not in list:
-    print("Oops, please choose a valid option and try again")
+    print("Oops, please choose a valid #portions attributed to class 4 lecture video and comments via Slack
+imoption and try again")
     exit()
 #simulating computer choice
 
@@ -27,7 +32,7 @@ print(f"The computer chose: {computer_choice}")
 
 #determining who won
 print("-------------------")
-#attributed to classmate Estelle Spanneut in Slack
+#adapted from solutions shared by Estelle Spanneut in Slack
 if computer_choice == "paper" and user_choice == "scissors":
     print("Congrats! You Won!")
 elif computer_choice == "scissors" and user_choice == "rock":
