@@ -15,7 +15,7 @@ Fork this [remote repository](https://github.com/mcoyne16/RPE-exercise) under yo
 Then navigate there from the command line (subsequent commands assume you are running them from the local repository's root directory):
 
 ```sh
-cd my-first-python-app
+cd RPE-Exercise
 ```
 
 Use Anaconda to create and activate a new virtual environment, perhaps called "my-game-env":
@@ -53,3 +53,7 @@ python -m app.game.py
 ```
 
 > NOTE: if you see an error like "ModuleNotFoundError: No module named '...'", it's because the given package isn't installed, so run the `pip` command above to ensure that package has been installed into the virtual environment
+
+## Gameplay
+
+Now you are ready to play the game. You should see your selected user name in the welcome message, and the game will prompt you to select one of "rock", "paper", or "scissors".  Once you type and enter your choice, the computer's random choice will be revealed, followed by the results.  Run the game script again to continue playing. 
