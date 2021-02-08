@@ -1,5 +1,5 @@
 # game.py
-
+import random
 
 print("-------------------")
 print("Welcome 'Player One' to my Rock-Paper-Scissors game...")
@@ -7,29 +7,22 @@ print("-------------------")
 
 #asking user for input
 
-x = input("Please choose either 'rock', 'paper', or 'scissors':")
+user_choice = input("Please choose either 'rock', 'paper', or 'scissors':")
+#the comma way: print("You chose: ", x, "another string")
+#you could also string concat: print "" + ""
+print(f"You chose: {user_choice}")
 
-#print(x)
+#simulating computer choice
 
-#print("You chose: ", x, "another string")
-print("You chose: ", x)
-# you could also string concat and interpolation
-#print "" + ""
-print(f"You chose: {x}")
+list = ['rock', 'paper', 'scissors']
+print("The computer chose: 'paper'")
+computer_choice = random.choise(list)
 
+print(f"The computer chose: {computer_choice}")
 
 exit()
 
 
-
-
-
-
-print("You chose: 'rock'")
-
-#simulating computer choice
-
-print("The computer chose: 'paper'")
 
 #determining who won
 
