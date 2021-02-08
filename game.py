@@ -1,4 +1,5 @@
 # game.py
+#portions attributed to class 4 lecture video and comments via Slack
 import random
 #from random import choice
 
@@ -13,15 +14,20 @@ user_choice = input("Please choose either 'rock', 'paper', or 'scissors':")
 #you could also string concat: print "" + ""
 print(f"You chose: {user_choice}")
 
+list = ['rock', 'paper', 'scissors']
+if user_choice not in list:
+    print("Oops, please choose a valid option and try again")
+    exit()
 #simulating computer choice
 
-list = ['rock', 'paper', 'scissors']
 computer_choice = random.choice(list)
 print(f"The computer chose: {computer_choice}")
+# validate the user selection
+#stop the program and not try to determine winner if choice not valid
 
 #determining who won
 print("-------------------")
-
+#attributed to classmate Estelle Spanneut in Slack
 if computer_choice == "paper" and user_choice == "scissors":
     print("Congrats! You Won!")
 elif computer_choice == "scissors" and user_choice == "rock":
