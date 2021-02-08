@@ -1,6 +1,6 @@
 # Rock Paper Scissors Exercise
 
-An example Python application for students to run to test their local development environment setups.
+A Python application that allows users to play rock, paper, scissors against a computer opponent.
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ An example Python application for students to run to test their local developmen
 
 ## Installation
 
-Fork this [remote repository](https://github.com/mcoyne16/RPE-exercise) under your own control, then "clone" or download your remote copy onto your local computer.
+Fork this [remote repository](https://github.com/mcoyne16/RPE-exercise) under your own control, then clone or download your remote copy onto your local computer.
 
 Then navigate there from the command line (subsequent commands assume you are running them from the local repository's root directory):
 
@@ -37,7 +37,7 @@ pip install -r requirements.txt
 
 In in the root directory of your local repository, create a new file called ".env", and update the contents of the ".env" file to specify your desired username:
 
-    USER_NAME="Firstname Lastname"
+    USER_NAME = "Firstname Lastname"
 
 > NOTE: the ".env" file is usually the place for passing configuration options and secret credentials, so as a best practice we don't upload this file to version control (which is accomplished via a corresponding entry in the [.gitignore](/.gitignore) file)
 
@@ -46,14 +46,11 @@ In in the root directory of your local repository, create a new file called ".en
 Run the game script:
 
 ```py
-python app/game.py
-
-# alternative module-style invocation (only required if importing from one file to another):
-python -m app.game.py
+python game.py
 ```
 
 > NOTE: if you see an error like "ModuleNotFoundError: No module named '...'", it's because the given package isn't installed, so run the `pip` command above to ensure that package has been installed into the virtual environment
 
 ## Gameplay
 
-Now you are ready to play the game. You should see your selected user name in the welcome message, and the game will prompt you to select one of "rock", "paper", or "scissors".  Once you type and enter your choice, the computer's random choice will be revealed, followed by the results.  Run the game script again to continue playing. 
+Now you are ready to play the game. You should see your selected user name in the welcome message, and the game will prompt you to select one of "rock", "paper", or "scissors".  If one of these option is not entered correctly, an error message will appear.  If the user enters an option correctly, the program will simulate and reveal the computer's choice, followed by the results. Run the game script again to continue play. 

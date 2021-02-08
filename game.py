@@ -1,7 +1,10 @@
 # game.py
+
+#portions attributed to class 4 lecture video and comments via Slack
 import random
-#from random import choice
-from dotenv import load_dotenv()
+import os
+#another way: from random import choice
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -12,23 +15,21 @@ print(f"Welcome {USER_NAME} to my Rock-Paper-Scissors game...")
 print("-------------------")
 
 #asking user for input
-
 user_choice = input("Please choose either 'rock', 'paper', or 'scissors':")
 #the comma way: print("You chose: ", x, "another string")
 #you could also string concat: print "" + ""
 print(f"You chose: {user_choice}")
 
+# validate the user selection
 list = ['rock', 'paper', 'scissors']
 if user_choice not in list:
-    print("Oops, please choose a valid #portions attributed to class 4 lecture video and comments via Slack
-imoption and try again")
+    print("Oops, please choose a valid option and try again")
     exit()
-#simulating computer choice
+#stop the program and not try to determine winner if choice not valid
 
+#simulating computer choice
 computer_choice = random.choice(list)
 print(f"The computer chose: {computer_choice}")
-# validate the user selection
-#stop the program and not try to determine winner if choice not valid
 
 #determining who won
 print("-------------------")
